@@ -7,14 +7,10 @@
 /Initium-Odp/war/WEB-INF/lib/appengine-endpoints-deps.jar
 /Initium-Odp/war/WEB-INF/lib/appengine-jsr107cache-1.9.36.jar
 *.eml
-/CachedDatastore/
 /GameElementsFramework/
-/GEFCommon/
-/GEFJson/
 /initium-core/
 /RandomGenerators/
 /RestClient/
-/java-webapp-lite/
 RemoteSystemsTempFiles/
 /Initium-Odp/Initium-ODP/src/META-INF/jdoconfig.xml
 /Initium-Odp/Initium-ODP/src/META-INF/persistence.xml

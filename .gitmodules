@@ -1,0 +1,12 @@
+[submodule "GEFCommon"]
+	path = GEFCommon
+	url = https://bitbucket.org/universeprojects/gefcommon.git
+[submodule "CachedDatastore"]
+	path = CachedDatastore
+	url = https://github.com/Emperorlou/Cached-Datastore.git
+[submodule "GEFJson"]
+	path = GEFJson
+	url = https://github.com/Emperorlou/Initium-JSON.git
+[submodule "Webapp"]
+	path = Webapp
+	url = https://github.com/UniverseProjects/java-webapp-lite.git
