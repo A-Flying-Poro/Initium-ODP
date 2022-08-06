@@ -19,14 +19,6 @@
             <id>mavenCentral</id>
             <url>https://repo1.maven.org/maven2/</url>
         </repository>
-        <repository>
-            <id>universeInternal</id>
-            <url>http://dev.universeprojects.com/archiva/repository/internal/</url>
-        </repository>
-        <repository>
-            <id>universeSnapshots</id>
-            <url>http://dev.universeprojects.com/archiva/repository/snapshots/</url>
-        </repository>
     </repositories>
 
     <modules>

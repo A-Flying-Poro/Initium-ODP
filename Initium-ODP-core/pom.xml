@@ -129,6 +129,28 @@
     </build>
 
     <dependencies>
+        <!-- Submodule dependency -->
+        <dependency>
+            <groupId>com.universeprojects</groupId>
+            <artifactId>GEFCommon</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.universeprojects</groupId>
+            <artifactId>Cached-Datastore</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.universeprojects</groupId>
+            <artifactId>Initium-JSON</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.universeprojects</groupId>
+            <artifactId>java-webapp-lite</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!-- Kotlin -->
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
