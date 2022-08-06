@@ -1,0 +1,10 @@
+.gradle
+build/
+
+war
+bin
+.settings
+*.iml
+.gwt-log
+/.classpath
+/.project
