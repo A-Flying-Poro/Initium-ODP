@@ -64,8 +64,11 @@ public abstract class ItemAspect extends InitiumAspect
 //		ItemPopupEntry ipe = new ItemPopupEntry(name, description, js);
 //		return ipe;
 	}
-	
-	public static class ItemPopupEntry
+
+    // TODO
+    public abstract Integer getVersion();
+
+    public static class ItemPopupEntry
 	{
 		public String name;
 		public String description;

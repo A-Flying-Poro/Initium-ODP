@@ -1265,7 +1265,7 @@ public class GridMapService {
 	{
 		if (locationDataEntity!=null)
 		{
-			System.out.println("Size: "+DBUtils.getEntitySize(locationDataEntity)+" bytes");
+//			System.out.println("Size: "+DBUtils.getEntitySize(locationDataEntity)+" bytes");
 			ds.put(locationDataEntity);
 		}
 	}

@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
+import com.google.appengine.api.datastore.Query;
 import com.universeprojects.cacheddatastore.CachedEntity;
 import com.universeprojects.cacheddatastore.QueryHelper;
 import com.universeprojects.miniup.CommonChecks;
@@ -47,7 +48,7 @@ public class CommandBeginNoobQuests extends Command
 
 		// Delete all the previous quests in this quest line now...
 		QueryHelper q = new QueryHelper(db.getDB());
-		List<Key> keys = q.getFilteredList_Keys("QuestDef", "noobQuest", true, "questLine", questLine);
+		List<Key> keys = q.getFilteredList_Keys("QuestDef", "noobQuest", Query.FilterOperator.EQUAL, true, "questLine", Query.FilterOperator.EQUAL, questLine);
 		
 		List<Key> questsToDelete = new ArrayList<>();
 		for(Key key:keys)

@@ -1,11 +1,7 @@
 package com.universeprojects.miniup.server.dbentities;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import org.apache.commons.lang3.StringUtils;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import com.google.appengine.api.datastore.Key;
 import com.universeprojects.cacheddatastore.CachedEntity;
@@ -82,7 +78,7 @@ public class GuardSetting extends InitiumEntityBase
 
 	public void setExclude(GuardExclusion...exclude)
 	{
-		entity.setProperty("exclude", StringUtils.join(exclude, ','));
+		entity.setProperty("exclude", Arrays.stream(exclude).map(GuardExclusion::toString).collect(Collectors.joining(",")));
 	}
 
 	public Key getLocationKey()

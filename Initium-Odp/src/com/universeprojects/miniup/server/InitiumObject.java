@@ -345,7 +345,8 @@ public class InitiumObject implements GameObject<Key>
 		command.addJavascriptToResponse("updateItemImage("+getKey().getId()+", '"+GameUtils.getResourceUrl(getIcon())+"');");
 	}
 
-	@Override
+    // TODO
+//	@Override
 	public Double getMass() {
 		Long mass = (Long)entity.getProperty("weight");
 		if (mass==null) mass = 0L;
@@ -353,13 +354,15 @@ public class InitiumObject implements GameObject<Key>
 		return mass.doubleValue();
 	}
 
-	@Override
+    // TODO
+//	@Override
 	public void setMass(Double mass) {
 		if (mass==null) mass = 0d;
 		entity.setProperty("weight", mass.longValue());
 	}
 
-	@Override
+    // TODO
+//	@Override
 	public Double getVolume() {
 		Long space = (Long)entity.getProperty("space");
 		if (space==null) space = 0L;
@@ -367,19 +370,22 @@ public class InitiumObject implements GameObject<Key>
 		return space.doubleValue();
 	}
 
-	@Override
+    // TODO
+//	@Override
 	public void setVolume(Double volume) {
 		if (volume==null) volume = 0d;
 		
 		entity.setProperty("space", volume.longValue());
 	}
 
-	@Override
+    // TODO
+//	@Override
 	public GameAspect<Key> addAspect(String aspectName) {
 		return aspects.put(aspectName, (InitiumAspect)GameUtils.createObject("com.universeprojects.miniup.server.aspects.Aspect"+aspectName, this));
 	}
 
-	@Override
+    // TODO
+//	@Override
 	public void removeAspect(String aspectName) {
 		aspects.remove(aspectName);
 	}
