@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -540,10 +541,10 @@ public class AspectFireplace extends ItemAspect
 
 				pool.loadEntities();
 
-				List<CachedEntity> tinder = pool.get(tinderKey);
-				List<CachedEntity> kindling = pool.get(kindlingKey);
-				List<CachedEntity> firestarter = pool.get(firestarterKey);
-				List<CachedEntity> additionalFirewood = pool.get(additionalFirewoodKey);
+				List<CachedEntity> tinder = pool.get(tinderKey.stream().map(InitiumKey::getDatastoreKey).collect(Collectors.toList()));
+				List<CachedEntity> kindling = pool.get(kindlingKey.stream().map(InitiumKey::getDatastoreKey).collect(Collectors.toList()));
+				List<CachedEntity> firestarter = pool.get(firestarterKey.stream().map(InitiumKey::getDatastoreKey).collect(Collectors.toList()));
+				List<CachedEntity> additionalFirewood = pool.get(additionalFirewoodKey.stream().map(InitiumKey::getDatastoreKey).collect(Collectors.toList()));
 
 				if (tinder == null || tinder.isEmpty()) throw new UserErrorMessage("You need tinder to start a fire.");
 

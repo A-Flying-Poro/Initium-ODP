@@ -141,6 +141,6 @@ public abstract class InitiumAspect implements GameAspect<Key>
 		throw new RuntimeException("Not yet implemented");
 	}
 
-	
-	
+
+    public abstract Integer getVersion();
 }
