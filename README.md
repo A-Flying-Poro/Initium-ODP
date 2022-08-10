@@ -1,12 +1,27 @@
 # Initium-ODP
 This project allows people to contribute to the parts of Initium that are open source.                 
 
+# Requirements
+* **Java Development Kit (JDK) 8**
+  * Any vendors acceptable, [Eclipse AdoptOpenJDK](https://adoptium.net/temurin/releases/?version=8) available if you need one.
+* **Integrated Development Environment (IDE)**
+  * [IntelliJ Community Edition](https://www.jetbrains.com/idea/) **(Recommended)**
+  * [Eclipse](https://www.eclipse.org/)
+  * Any other IDE that you prefer
+* **Git**
+  * Pre-installed on **macOS** and **Linux**
+  * [Git for Windows](https://gitforwindows.org/)
+* **Git GUI** (optional, but easier for workflow)
+  * [GitHub Desktop](https://desktop.github.com/)
+  * [SourceTree](https://www.sourcetreeapp.com/)
+  * [TortoiseGit](https://tortoisegit.org/)
+
 # How to get your development environment setup
 It's possible to get things working using a different IDE and other different variations (like JDK version), but I'll try to give you precise instructions for getting things working the way I know how.  
 
 **Please let me know if anything doesn't work for you so I can update the documentation!**
 
-## Download and install JDK 1.7
+## Download and install JDK 1.8
 (Only if you don't already have it)
 You should be able to find what you need here:
 http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html
@@ -48,5 +63,3 @@ If there was ANYTHING that didn't work as expected, please update this documenta
 
 
 My appologies in advance for the lack of a proper build process and manager!
-
-
