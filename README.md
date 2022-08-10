@@ -33,7 +33,7 @@ https://desktop.github.com/
 
 Before you clone the repo, create a fork of this project in GitHub (you will then create an upstream repo to link back to the root).
 
-Open Github Desktop, hitting File -> Clone a repository (Ctrl + Shift + O) and select **yourUsername**/Initium-ODP. Be sure to set the path where you want files localled downloaded below.
+Open Github Desktop, hitting File -> Clone a repository (Ctrl + Shift + O) and select **yourUsername**/Initium-ODP. Be sure to set the path where you want files locally downloaded below.
 
 There may or may not be a pop-up here asking how you plan to use the fork, if there is, select 'To contribute to the parent project'.
 If there is not, or you picked the other option(s), do as follows:
