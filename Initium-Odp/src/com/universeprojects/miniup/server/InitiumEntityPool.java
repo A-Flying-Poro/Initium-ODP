@@ -2,13 +2,11 @@ package com.universeprojects.miniup.server;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.google.appengine.api.datastore.Key;
-import com.google.common.collect.Lists;
 import com.universeprojects.cacheddatastore.CachedDatastoreService;
 import com.universeprojects.cacheddatastore.CachedEntity;
 import com.universeprojects.cacheddatastore.EntityPool;
@@ -123,7 +121,7 @@ public class InitiumEntityPool extends EntityPool
 	}
 	
 	@Override
-	public List<CachedEntity> get(Collection entityKeys)
+	public List<CachedEntity> get(List<Key> entityKeys)
 	{
 		List dsKeys = new ArrayList();
 		List proceduralKeys = new ArrayList();

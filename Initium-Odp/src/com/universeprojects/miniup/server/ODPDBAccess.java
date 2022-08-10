@@ -1,22 +1,7 @@
 package com.universeprojects.miniup.server;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Random;
-import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -44,7 +29,7 @@ import com.universeprojects.cacheddatastore.CachedEntity;
 import com.universeprojects.cacheddatastore.EntityPool;
 import com.universeprojects.cacheddatastore.QueryHelper;
 import com.universeprojects.cacheddatastore.Transaction;
-import com.universeprojects.generators.shared.random.RandomDistributionFactory.ParseException;
+//import com.universeprojects.generators.shared.random.RandomDistributionFactory.ParseException;
 import com.universeprojects.miniup.CommonChecks;
 import com.universeprojects.miniup.server.aspects.AspectBuffable;
 import com.universeprojects.miniup.server.commands.CommandItemsStackMerge;
@@ -1135,7 +1120,7 @@ public class ODPDBAccess
 		
 	    pool.addToQueue(alwaysVisiblePaths);
 	    
-	    Set<Key> pathKeys = new LinkedHashSet<>(alwaysVisiblePaths);
+	    List<Key> pathKeys = new LinkedList<>(alwaysVisiblePaths);
 	    for(CachedEntity discovery:discoveriesForCharacterAndLocation)
 	    {
 	    	pool.addToQueue(discovery.getProperty("location1Key"), discovery.getProperty("location2Key"), discovery.getProperty("entityKey"));
@@ -4832,7 +4817,7 @@ public class ODPDBAccess
 		{
 		    try {
 				result = solveProperty("Attack with Weapon", weapon, "weaponDamage");
-			} catch (ParseException e) {
+			} catch (ContentDeveloperException e) {
 				throw new ContentDeveloperException("Parsing error on the weaponDamage field in "+weapon.getKey()+": "+e.getMessage());
 			}
 		    if (result==null)
@@ -5025,7 +5010,7 @@ public class ODPDBAccess
 	 * @return
 	 * @throws ParseException 
 	 */
-	public Object solveProperty(String string, CachedEntity weapon, String fieldName) throws ParseException
+	public Object solveProperty(String string, CachedEntity weapon, String fieldName) throws ContentDeveloperException
 	{
 		return null;
 	}
@@ -8043,8 +8028,8 @@ public class ODPDBAccess
 
 	public List<Key> getLocationAlwaysVisiblePaths_KeysOnly(Key locationKey)
 	{
-		List<Key> alwaysVisiblePaths = query.getFilteredList_Keys("Path", 100, "location1Key", locationKey, "discoveryChance", 100d);
-		alwaysVisiblePaths.addAll(query.getFilteredList_Keys("Path", 100, "location2Key", locationKey, "discoveryChance", 100d));
+		List<Key> alwaysVisiblePaths = query.getFilteredList_Keys("Path", 100, "location1Key", FilterOperator.EQUAL, locationKey, "discoveryChance", FilterOperator.EQUAL, 100d);
+		alwaysVisiblePaths.addAll(query.getFilteredList_Keys("Path", 100, "location2Key", FilterOperator.EQUAL, locationKey, "discoveryChance", FilterOperator.EQUAL, 100d));
 		return alwaysVisiblePaths;
 	}
 	

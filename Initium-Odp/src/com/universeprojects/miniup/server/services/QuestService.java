@@ -227,7 +227,7 @@ public class QuestService extends Service
 			{
 				if (objective.isComplete()) continue;
 				if (objective.getNeededCharacterFieldValues()==null || objective.getNeededCharacterFieldValues().isEmpty()) continue;
-				boolean success = doExpressionChecks(objective, objective.getNeededCharacterFieldValues(), character);
+				boolean success = doExpressionChecks(objective, objective.getNeededCharacterFieldValues(), character.getEntity());
 				
 				if (success)
 				{
@@ -257,7 +257,7 @@ public class QuestService extends Service
 			{
 				if (objective.isComplete()) continue;
 				if (objective.getNeededInventoryItemFieldValues()==null || objective.getNeededInventoryItemFieldValues().isEmpty()) continue;
-				boolean success = doExpressionChecks(objective, objective.getNeededInventoryItemFieldValues(), item);
+				boolean success = doExpressionChecks(objective, objective.getNeededInventoryItemFieldValues(), item.getEntity());
 				
 				if (success)
 				{
@@ -285,7 +285,7 @@ public class QuestService extends Service
 			{
 				if (objective.isComplete()) continue;
 				if (objective.getNeededLocationFieldValues()==null || objective.getNeededLocationFieldValues().isEmpty()) continue;
-				boolean success = doExpressionChecks(objective, objective.getNeededLocationFieldValues(), location);
+				boolean success = doExpressionChecks(objective, objective.getNeededLocationFieldValues(), location.getEntity());
 				
 				if (success)
 				{
